@@ -1,0 +1,8 @@
+com\sopadeletras\controller\Partida.class
+com\sopadeletras\dao\GenericDAO.class
+com\sopadeletras\dao\SopaDAO.class
+com\sopadeletras\model\Usuario.class
+com\sopadeletras\model\Sopa.class
+com\sopadeletras\controller\Login.class
+com\sopadeletras\dao\DiccionarioDAO.class
+com\sopadeletras\model\Diccionario.class
