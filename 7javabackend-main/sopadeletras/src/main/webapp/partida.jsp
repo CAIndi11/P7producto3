@@ -117,6 +117,7 @@ session.invalidate();
 			clearInterval(timer);
 		};
 
+		//desde aqui podriamos añadir las palabras que quisieramos
 		var words = [ 'Paco', 'Backend', 'Producto', 'Inigo', 'Paula',
 				'Victoria', 'Locura' ];
 

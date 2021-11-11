@@ -31,7 +31,7 @@ public class Login extends HttpServlet {
     		   throws ServletException, IOException {
 
     		  String strUrl = "index.jsp";
-    		  //String strUrl2 = "partida.jsp";
+    		  //String strUrl2 = "PartidaJuego.jsp";
     		  String username = request.getParameter("username");
     		  String password = request.getParameter("password");
 
@@ -41,6 +41,8 @@ public class Login extends HttpServlet {
     		  boolean autentificado = false;
     		  
     		  //Declaramos parametros para la conexión LDAP
+    		  //Hay que tener en cuenta sobre todo el uid y la contraseña
+    		  //Vigilar también el tema de versiones 
     		  
   			env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
   			env.put(Context.PROVIDER_URL, "ldap://localhost:10389");
