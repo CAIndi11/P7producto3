@@ -6,35 +6,34 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.sopadeletras.model.Juego;
 
-import com.sopadeletras.model.Sopa;
-
-public class SopaDAO implements GenericDAO<Sopa, Integer>{
+public class JuegoDAO implements GenericDAO<Juego, Integer>{
 	
 
 	private EntityManager manager;
 	
-	public SopaDAO() {
+	public JuegoDAO() {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("sopadeletras");
 		manager = emf.createEntityManager();
 		}
 
 	@Override
-	public void insertar(Sopa t){
+	public void insertar(Juego t){
 		manager.getTransaction().begin();
 		manager.persist(t);
 		manager.getTransaction().commit();
 	}
 
 	@Override
-	public void modificar(Sopa t){
+	public void modificar(Juego t){
 		manager.getTransaction().begin();
 		manager.merge(t);
 		manager.getTransaction().commit();
 	}
 
 	@Override
-	public void eliminar(Sopa t){
+	public void eliminar(Juego t){
 		manager.getTransaction().begin();
 		manager.remove(t);
 		manager.getTransaction().commit();
@@ -42,13 +41,13 @@ public class SopaDAO implements GenericDAO<Sopa, Integer>{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Sopa> obtenerTodos() {
-		return (List<Sopa>) manager.createQuery("FROM Sopa").getResultList();
+	public List<Juego> obtenerTodos() {
+		return (List<Juego>) manager.createQuery("FROM Juego").getResultList();
 	}
 
 	@Override
-	public Sopa obtener(Integer id){
-		return manager.find(Sopa.class, id);
+	public Juego obtener(Integer id){
+		return manager.find(Juego.class, id);
 	}
 
 }

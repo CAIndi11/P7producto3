@@ -11,40 +11,41 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name ="Sopa")
-public class Sopa implements Serializable{
+public class Juego implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
 	//propiedades
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idSopa")
-	int idSopa;
+	@Column(name = "idJuego")
+	int idJuego;
 	@Column(name = "idJugador")
 	String idJugador;
 	@Column(name = "puntos")
 	int puntos;
 	
 	//Contructor vacio
-	public Sopa() {
+	public Juego() {
 		
 	}	
 	
 	//Contructor con 2 atributos
-	public Sopa(String idJugador, int puntos) {
+	public Juego(String idJugador, int puntos) {
+		
 		//super();
 		this.idJugador = idJugador;
 		this.puntos = puntos;
 	}
 	
 
-	public int getIdSopa() {
-		return idSopa;
+	public int getIdJuego() {
+		return idJuego;
 	}
 
 
-	public void setIdSopa(int idSopa) {
-		this.idSopa = idSopa;
+	public void setIdJuego(int idJuego) {
+		this.idJuego = idJuego;
 	}
 
 

@@ -4,9 +4,8 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
   <persistence-unit name="sopadeletras">
-  
-  	<class>com.sopadeletras.model.Sopa</class>
   	<class>com.sopadeletras.model.Diccionario</class>
+  	<class>com.sopadeletras.model.Juego</class>
   
     <properties>
         <property name="javax.persistence.jdbc.driver" value="org.hibernate.dialect.MySQLDialect" />

@@ -1,12 +1,12 @@
 package com.sopadeletras.model;
 
-public class Usuario {
+public class Jugador {
 	
 	//Propiedades
 	String username;
 	String password;
 	
-	public Usuario(String username, String password) {
+	public Jugador(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
