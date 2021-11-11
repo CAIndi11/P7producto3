@@ -76,18 +76,19 @@ button::-moz-focus-inner {
 
 /* indicates that the square is part of a word that has been found */ 
 #puzzle .found {
-  background-color: blue;
-  color: white;
+  background-color: #7EF97A;
+  color: #ffffff;
 }
 
 #puzzle .solved {
-  background-color: purple;
+  background-color: red;
   color: white;
 }
 
 /* indicates that all words have been found */
 #puzzle .complete {
-  background-color: green;
+  background-color: #89FB89;
+  color: FEA825;
 }
 
 /**
@@ -117,7 +118,7 @@ button::-moz-focus-inner {
 /* indicates that the word has been found */
 .wordFound {
   text-decoration: line-through;
-  color: gray;
+  color: #1F9B00;
 }
 
 /**
@@ -136,7 +137,7 @@ label {
 }
 input {
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #FEA825;
   font-size: 1em;
 }
 input[type="number"] {

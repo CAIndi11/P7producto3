@@ -20,7 +20,7 @@ session.invalidate();
 
 <head>
 <meta charset="UTF-8">
-<title>7J - Sopa de letras</title>
+<title>Javeadores - Sopa de letras</title>
 <link rel="stylesheet" type="text/css" href="css/wordfind.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -69,7 +69,7 @@ session.invalidate();
 			</div>
 		</div>
 		<div class="row w-100">
-			<div class="col-md-8">
+			<div class="col-md-6">
 				<div id='puzzle'></div>
 			</div>
 			<div class="col-md-4">
