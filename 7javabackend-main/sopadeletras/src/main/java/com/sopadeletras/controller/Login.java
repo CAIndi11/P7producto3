@@ -1,7 +1,7 @@
 package com.sopadeletras.controller;
 import java.io.IOException;
 import java.util.Hashtable;
-//import java.util.Properties;
+import java.util.Properties;
 
 import javax.naming.*;
 import javax.naming.directory.*;
@@ -36,17 +36,16 @@ public class Login extends HttpServlet {
     		  String password = request.getParameter("password");
 
     		  Hashtable<String, String> env = new Hashtable<>();
-    		  //Properties env = new Properties();
     		  
     		  //Variable control autentidicación
     		  boolean autentificado = false;
     		  
     		  //Declaramos parametros para la conexión LDAP
-    		  env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
-    		  env.put(Context.PROVIDER_URL, "ldap://192.168.0.157:389");
-    		  env.put(Context.SECURITY_AUTHENTICATION, "simple");
-    		  env.put(Context.SECURITY_PRINCIPAL, "cn=" + username +", ou=Users, dc=p7j, dc=edu");
-    		  env.put(Context.SECURITY_CREDENTIALS, password);
+    		  
+  			env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
+  			env.put(Context.PROVIDER_URL, "ldap://localhost:10389");
+  			env.put(Context.SECURITY_PRINCIPAL, "uid=admin, ou=system");
+  			env.put(Context.SECURITY_CREDENTIALS, "secret");
 
     		  try {
     		   // Creamos el contexto inicial
@@ -60,14 +59,10 @@ public class Login extends HttpServlet {
     			  autentificado = false;
     		  } finally {
     			  if (autentificado) {
-    				  //System.out.print("Success");
     				  HttpSession session=request.getSession();
     			      session.setAttribute("user",username);
-    				  response.sendRedirect("/com.sopadeletras/partida");
-    				  //RequestDispatcher rd = request.getRequestDispatcher(strUrl2);
-    	    		  //rd.forward(request, response);
-    			   }else {
-    				  //System.out.print("Failure");    				  
+    				  response.sendRedirect("partida.jsp");
+    			   }else {   				  
     				  RequestDispatcher rd = request.getRequestDispatcher(strUrl);
     	    		  rd.forward(request, response);
 
@@ -82,7 +77,6 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

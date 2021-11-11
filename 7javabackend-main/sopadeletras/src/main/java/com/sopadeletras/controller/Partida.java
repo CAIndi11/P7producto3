@@ -35,17 +35,17 @@ public class Partida extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		DiccionarioDAO diccionarioDB = new DiccionarioDAO();
-		List<Diccionario> todoDiccionario = diccionarioDB.obtenerTodos();
+		DiccionarioDAO dicBD = new DiccionarioDAO();
+		List<Diccionario> diccionario = dicBD.obtenerTodos();
 		
 		List<Diccionario> listaPalabras = new ArrayList<Diccionario>();
 		
 		
 		for (int i = 0; i < 5; i++) {
-			int rnd = new Random().nextInt(todoDiccionario.size());			
-			Diccionario d = todoDiccionario.get(rnd);
+			int rnd = new Random().nextInt(diccionario.size());			
+			Diccionario d = diccionario.get(rnd);
 			listaPalabras.add(d);
-			todoDiccionario.remove(d);			
+			diccionario.remove(d);			
 		}			
 
 		request.setAttribute("listaPalabras", listaPalabras);		
@@ -58,7 +58,6 @@ public class Partida extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
 		String user = (String)request.getSession().getAttribute("user");
 		
 		int tiempo = Integer.parseInt(request.getParameter("tiempo"));
