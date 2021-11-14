@@ -37,6 +37,7 @@ session.invalidate();
 <script type="text/javascript" src="js/wordfind.js"></script>
 <script type="text/javascript" src="js/wordfindgame.js"></script>
 </head>
+
 <body>
 
 	<div class="alert alert-success text-center fade" role="alert"
@@ -84,7 +85,13 @@ session.invalidate();
 <script type="text/javascript" src="js/wordfindgame.js"></script> -->
 
 
-
+<!-- Documentacion de un juego de sopa letras encontrado en:
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+-->
 	<script>
 		var timer = setInterval(voyComprobando, 1000);
 
@@ -124,7 +131,10 @@ session.invalidate();
 		<c:forEach items="${listaPalabras}" var="diccionario">
 		words.push("${diccionario.palabra}");
 		</c:forEach>
-
+		
+		//Con un poco más de tiempo hubieramos creado un diccionario de palabras
+		//que rellenara la sopa de letras automaticamente cada vez.
+		
 		var puzzle = wordfind.newPuzzle(words, {
 			height : 10,
 			width : 10,

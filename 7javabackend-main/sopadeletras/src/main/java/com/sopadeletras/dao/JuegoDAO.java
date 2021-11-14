@@ -10,7 +10,8 @@ import com.sopadeletras.model.Juego;
 
 public class JuegoDAO implements GenericDAO<Juego, Integer>{
 	
-
+	//El entity manager guarda internamente todas las entidades que gestiona
+	//Utiliza una caché de los datos en la base de datos. 
 	private EntityManager manager;
 	
 	public JuegoDAO() {
@@ -18,6 +19,7 @@ public class JuegoDAO implements GenericDAO<Juego, Integer>{
 		manager = emf.createEntityManager();
 		}
 
+	//Metodos
 	@Override
 	public void insertar(Juego t){
 		manager.getTransaction().begin();

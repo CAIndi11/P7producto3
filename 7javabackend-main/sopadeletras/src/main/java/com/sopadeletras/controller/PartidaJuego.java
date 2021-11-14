@@ -76,7 +76,7 @@ public class PartidaJuego extends HttpServlet {
 			puntuacion = 25;
 		}else puntuacion = 10;	
 		
-		
+		//Se inserta una nueva instancia de la clase Juego en la BBDD
 		Juego Juego = new Juego(user, puntuacion);
 		JuegoDAO JuegoDAO = new JuegoDAO();
 		JuegoDAO.insertar(Juego);

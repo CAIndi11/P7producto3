@@ -15,6 +15,9 @@
     <script src="js/bootstrap.min.js"></script>     
 </head>
 <body>
+<!-- Llamaremos al servlet usando jQuery AJAX.
+Abajo está el Input donde dan el username. 
+jQuery AJAX ejecutara nuestro servlet y procesará la respuesta-->
 <div class="container">
 	<c:if test ="${not empty param.username}">
 		<div class="alert alert-danger text-center" role="alert">
