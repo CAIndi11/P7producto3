@@ -20,11 +20,10 @@ _Correr la BD MySql necesaria para la persistencía del juego_
 _Estas son las herramientas que hemos usado para el desarrollo del proyecto_
 
 * [Eclipse](https://www.eclipse.org/) - IDE para Enterprise Java Developers
-* [JDK](https://www.oracle.com/es/java/technologies/javase/javase-jdk8-downloads.html) - Java SE Development Kit 8
+* [JDK](https://www.oracle.com/es/java/technologies/javase/javase-jdk8-downloads.html) - Java SE Development Kit 11 - 16
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [Apache Tomcat](http://tomcat.apache.org/) - Servidor de aplicaciones
-* [OpenLDAP](https://www.openldap.org/) - Implementación libre del protocolo LDAP
-* [Turnkey Linux](https://www.turnkeylinux.org/openldap/) - Distribución de Linux con la implementación LDAP
+* [Apache Directorio Studio](http://directory.apache.org/studio/) - Implementación del protocolo LDAP
 * [Bootstrap](https://getbootstrap.com/) - Framework para la interfaz de usuario
 * [MySQL](https://www.mysql.com/) - BD para la persistencia del juego
 * [Hibernate](https://hibernate.org/) - Herramienta de mapeo objeto-relacional
