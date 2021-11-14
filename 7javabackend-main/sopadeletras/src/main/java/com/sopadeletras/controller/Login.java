@@ -31,13 +31,12 @@ public class Login extends HttpServlet {
     		   throws ServletException, IOException {
 
     		  String strUrl = "index.jsp";
-    		  //String strUrl2 = "PartidaJuego.jsp";
     		  String username = request.getParameter("username");
     		  String password = request.getParameter("password");
 
     		  Hashtable<String, String> env = new Hashtable<>();
     		  
-    		  //Variable control autentidicación
+    		  //Variable de autentificación
     		  boolean autentificado = false;
     		  
     		  //Declaramos parametros para la conexión LDAP
@@ -50,7 +49,7 @@ public class Login extends HttpServlet {
   			env.put(Context.SECURITY_CREDENTIALS, "secret");
 
     		  try {
-    		   // Creamos el contexto inicial
+    		   // Creamos el contexto 
     		   DirContext ctx = new InitialDirContext(env);
 
     		   // Establecemos variable y cerramos el contexto
