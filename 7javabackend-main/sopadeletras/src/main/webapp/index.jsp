@@ -29,11 +29,6 @@ jQuery AJAX ejecutara nuestro servlet y procesará la respuesta-->
 		<div class="card">
 			<div class="card-header">
 				<h3>Acceso a Juego</h3>
-			<!--  <div class="d-flex justify-content-end social_icon">
-					<span><i class="fas fa-brain"></i></span>
-					<span><i class="fab fa-java"></i></span>
-					<span><i class="fas fa-chess-board"></i></span>
-				</div> -->
 			</div>
 			<div class="card-body">
 				<form action="login" method="post">
